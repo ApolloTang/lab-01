@@ -1,30 +1,54 @@
-
-.box {
-    outline: red solid 1px;
-    height: 50px;
-}
-#box1 {
-    @include background(linear-gradient(red, blue ) )
+.li {
+    float: left;
 }
 
-#box2 {
-    @include background-image(url("/images/a.png"), linear-gradient(white 0, yellow 50%, transparent 50%));
+.mountains {
+    position: relative;
+    margin: 320px auto;
+    width: 800px;
+    z-index: 3;
 }
 
+.peak1 {
+    border-left:   200px solid transparent;
+    border-right:  200px solid transparent;
+    border-bottom: 200px solid SteelBlue;
+}
+.peak2 {
+    border-left:   150px solid transparent;
+    border-right:  175px solid transparent;
+    border-bottom: 150px solid SteelBlue;
+    margin-left: -200px;
+    margin-top: 50px;
 
-#box3 {
-      background-image: url("/images/a.png"), -webkit-linear-gradient( white 0, yellow 50%, transparent 50%);
 }
 
-#box4 {
-    outline: 1px solid red;
-    width: 40px;
-    height: 40px;
-    background-image: -webkit-radial-gradient(center, circle, green 10px, transparent 0);
-    background-size:  20px 20px;
-    background-position: 20px 10px;
-    background-repeat:   no-repeat;
+.peak3 {
+    border-left:   200px solid transparent;
+    border-right:  200px solid transparent;
+    border-bottom: 200px solid SteelBlue;
+    margin-left: -250px;
 }
 
+.sun {
+    background: gold;
+    border-radius: 50%;
+    height: 100px; width: 100px;
+    margin: 0 auto;
+    @include animation( rise 5s ease-in-out 2s infinite Alternate both)
+}
 
+@include keyframes(rise) {
+    0%   { opacity: 0; background: tomato; }
+    10%  { opacity: 1; background: tomato; }
+    20%  { opacity: 1; background: goldenrod; }
+    55%  { opacity: 1; background: golden; }
+    0%   { @include transform(translateY(0px)); }
+    100% { @include transform(translateY(-350px)); }
+}
 
+.clouds-wrapper {
+    margin: -150px auto;
+    width: 800px;
+    height: 500px;
+}
