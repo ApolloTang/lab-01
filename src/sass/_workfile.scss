@@ -21,7 +21,6 @@
     border-bottom: 150px solid SteelBlue;
     margin-left: -200px;
     margin-top: 50px;
-
 }
 
 .peak3 {
@@ -49,9 +48,40 @@
 }
 
 .clouds-wrapper {
+    outline: 1px solid red;
     margin: -150px auto;
     width: 800px;
-    height: 500px;
+
+    .ul {
+        position: relative;
+    }
+    .li {
+        position: aboslute;
+        background: Gainsboro;
+        outline: 1px solid red;
+        height: 100px;
+        width: 100px;
+
+        &:nth-child(1){
+            border-radius: 30px;
+            height: 50px; width: 150px;
+            background: red;
+        }
+        &:nth-child(2){
+            background: blue;
+            border-radius: 50px;
+            height: 80px; width: 80px;
+            margin-top: -40px;
+            margin-left: 23px;
+        }
+        &:nth-child(3){
+            background: green;
+            border-radius: 50px;
+            height: 50px; width: 50px;
+            margin-top: -25px;
+            margin-left: 80px;
+        }
+    }
 }
 
 body{ }
